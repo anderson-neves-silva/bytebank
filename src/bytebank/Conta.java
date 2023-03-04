@@ -21,13 +21,12 @@ public class Conta {
 	
 	public boolean transfere(double valor, Conta destino) {  // criando o método que possui dois parâmetros, note que o segundo ele é uma referência ou seta para uma conta
 		if (this.saldo >= valor) {  // checa se a conta possui valor disponível para transferir
-			this.saldo -= valor;  // e se sim retira o valor da conta origem
+			saca(valor);  // e se sim utiliza o método já criado chamado saca para retira o valor da conta origem
 			//destino.saldo += valor; // aqui eu posso fazer de duas forma, ou eu retiro aqui direto ou chamo o método deposita
 			destino.deposita(valor);
 			return true;
 		} else {
 			return false;
 		}
-		 
 	}
 }
