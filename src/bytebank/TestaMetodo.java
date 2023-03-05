@@ -23,6 +23,9 @@ public class TestaMetodo {
 		}
 		System.out.println("novo saldo: R$" + contaDaMarcela.saldo);
 		System.out.println(contaDoAnderson.saldo);  // checando se a conta recebeu a transferência
+		
+		contaDoAnderson.titular = "anderson neves";
+		System.out.println(contaDoAnderson.titular);
 	}
 
 }
