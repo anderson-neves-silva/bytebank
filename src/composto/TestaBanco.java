@@ -11,7 +11,7 @@ public class TestaBanco {
 		Conta contaDoAnderson = new Conta();  // criando o objeto
 		contaDoAnderson.deposita(100);  // depositando 100 na conta
 		
-		contaDoAnderson.titular = anderson;  // fazendo a ligação entre conta e cliente, conhecido como composição de objetos
+		contaDoAnderson.titular = anderson;  // fazendo a ligação entre conta e cliente, conhecido como composição de objetos, aqui associa o cliente anderson a conta contaDoAnderson
 		System.out.println(contaDoAnderson.titular.nome);
 		System.out.println(contaDoAnderson.titular);  // note que faz a referência para o mesmo obejto anderson
 		System.out.println(anderson);
