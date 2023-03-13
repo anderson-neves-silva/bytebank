@@ -15,5 +15,7 @@ public class TestaValores {
 		 * ou invocar esse método assim Conta.getTotal, e não mais como conta2.getTotal
 		 */
 		System.out.println(Conta.getTotal());
+		
+		// fim do curso Java OO
 	}	
 }
