@@ -3,23 +3,32 @@ package encapsulado;
 /*
  * deixando esses atributos privado ou protegido, agora eles não podem ser lidos e nem modificados, a não ser pela 
  * própria classe através dos métodos.
+ * todos atributos declarados aqui são conhecidos como atributos de instância ou atributos do objeto
  * private Cliente titular; essa linha mudo o tipo da variável String para o tipo Cliente que possibilita fazer a 
  * ligação ou referência da conta para a classe cliente.
+ * o atributo total ele não fica em cada instância criada, ou seja, pertencer apenas ao objeto criado, ele pertence 
+ * a classe conta e fica compartilhado em todas as intâncias criadas, e para fazer isso acrescentando static, resumindo
+ * o static quer dizer que é da classe e não do objeto como os demais atributos que não possui o static ou estático. 
  */
 public class Conta {
 	private double saldo; 
 	private int agencia;
 	private int numero;
 	private Cliente titular;
+	private static int total;
 	/*
 	 *  criando o constutor, se você ao criar uma classe não criar ele o java cria ele internamente, ele é conheciado
 	 *  como construtor padrão, ele basicamente não faz nada, ele também é conhecido como uma rotina de inicialização,
 	 *  ele só executado uma única vez que é quando criamos um objeto ou quando usamos o new.
+	 *  o total aqui apenas armazena a contagem de contas criadas, note que ele não usa o this pois ele não é do objeto
+	 *  ou instância, ele na verdade é da classe conta.
 	 */
-	public Conta(int agencia, int numero) {
+	public Conta (int agencia, int numero) {
+		Conta.total++;
+		//System.out.println("o total de contas é " + Conta.total);
 		this.agencia = agencia;
 		this.numero = numero;
-		System.out.println("estou criando uma conta " + this.numero);
+		//System.out.println("estou criando uma conta " + this.numero);
 	}
 	
 	public void deposita(double valor) {  
@@ -92,6 +101,15 @@ public class Conta {
 	
 	public void setTitular(Cliente titular) {
 		this.titular = titular;
+	}
+	/*
+	 * criando o método estático get que exibe o total de contas criadas, note que não usamos o this e sim o conta, 
+	 * porque ele é da classe, aqui vale para o mesmo que a explicação do atributo total, ele é da classe e não da 
+	 * instância criada.
+	 * 
+	 */
+	public static int getTotal() {
+		return Conta.total;
 	}
 	
 }
