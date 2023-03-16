@@ -3,6 +3,7 @@ package herdado;
 public class TesteFuncionario {
 
 	public static void main(String[] args) {
+		
 		Funcionario anderson = new Funcionario();
 		anderson.setNome("Anderson Neves");
 		anderson.setCpf("111333444-00");
@@ -10,6 +11,9 @@ public class TesteFuncionario {
 		
 		System.out.println(anderson.getNome());
 		System.out.println(anderson.getBonificacao());
+		
+		//anderson.salario = 300;
+		
 	}
 
 }

@@ -1,12 +1,16 @@
 package herdado;
 
 public class Funcionario {
-	
+	/*
+	 * protected double salario; essa linha fala de protected que está entre private e public, public para as classes 
+	 * filhos, para o resto é private, esse modificador foi criado para liberar acesso aos filhos e privado para as 
+	 * demais classes.
+	 */
 	private String nome;
 	private String cpf;
-	private double salario;
-		
-	// função que cria uma bonificação acrescentando 10% do salário.
+	protected double salario;
+	
+	// função que cria uma bonificação acrescentando 10% ao salário.
 	public double getBonificacao() {
 		return this.salario * 0.1;
 	}
@@ -34,4 +38,5 @@ public class Funcionario {
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+	
 }
