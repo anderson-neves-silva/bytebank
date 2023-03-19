@@ -7,15 +7,13 @@ public class TesteGerente {
 		Gerente g1 = new Gerente();
 		g1.setNome("Marcos");
 		g1.setCpf("2344684-13");
-		g1.setSalario(5000.0);
-		
+		g1.setSalario(5000.0);		
 		// agora temos acesso aos métodos da classe funcionário.
 		System.out.println(g1.getNome());
 		System.out.println(g1.getCpf());
 		System.out.println(g1.getSalario());
 		
-		g1.setSenha(2222);
-		
+		g1.setSenha(2222);		
 		// guardando a autenticação em uma variável.
 		boolean autenticou = g1.autentica(2222);
 		
