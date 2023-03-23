@@ -3,21 +3,26 @@ package herdado;
 public class TesteReferencias {
 	
 	public static void main(String[] args) {
-		/*
-		 * -criando um objeto, repare que no lado esquedo esse objeto é criado do tipo mais genérico, sendo do tipo
-		 * Funcionario, note que fazendo isso ao contrário não funciona, isso porque todo funcionário não é um gerente. 
-		 */
-		Funcionario g1 = new Gerente();
 		
-		g1.setNome("Juca");
-		String nome = g1.getNome();
+		Gerente g = new Gerente();		
+		g.setNome("Juca");
+		g.setSalario(5000.0);		
+		
+		Funcionario f = new Funcionario();
+		f.setSalario(2000.0);
+		
+		EditorVideo ev = new EditorVideo();
+		ev.setSalario(2500.0);
 		/*
-		 * -o compilador avalia sempre o tipo da referência, por isso aqui dá erro porque aqui só podemos chamar os 
-		 * métodos que estão no tipo da referência que nesse caso é a classe Funcionario, esse método autentica está na 
-		 * classe Gerente.
+		 * registrando o funcionário do tipo gerente, o funcionário do tipo funcionário sendo o mais genérico, e 
+		 * registrando o funcionário do tipo editor de vídeo. 
 		 */
-		//g1.autentica(2222);		
-		System.out.println(nome);
+		ControleBonificacao controle = new ControleBonificacao();
+		controle.registra(g);
+		controle.registra(f);
+		controle.registra(ev);
+		
+		System.out.println(controle.getSomaBonificacao());
 	}
 
 }

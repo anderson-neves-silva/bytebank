@@ -33,6 +33,7 @@ public class Gerente extends Funcionario {
 	 * e com isso mudo a visibilidade dele lá na super classe de protected para private.
 	 */
 	public double getBonificacao() {
+		System.out.println("Chamando o método de bonificação do Gerente");
 		return super.getBonificacao() + super.getSalario();
 	}
 	
