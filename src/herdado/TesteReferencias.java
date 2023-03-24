@@ -13,6 +13,9 @@ public class TesteReferencias {
 		
 		EditorVideo ev = new EditorVideo();
 		ev.setSalario(2500.0);
+		
+		Designer d = new Designer();
+		d.setSalario(2000.0);
 		/*
 		 * registrando o funcionário do tipo gerente, o funcionário do tipo funcionário sendo o mais genérico, e 
 		 * registrando o funcionário do tipo editor de vídeo. 
@@ -21,6 +24,7 @@ public class TesteReferencias {
 		controle.registra(g);
 		controle.registra(f);
 		controle.registra(ev);
+		controle.registra(d);
 		
 		System.out.println(controle.getSomaBonificacao());
 	}
