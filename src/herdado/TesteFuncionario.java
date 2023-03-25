@@ -4,7 +4,7 @@ public class TesteFuncionario {
 
 	public static void main(String[] args) {
 		
-		Funcionario anderson = new Funcionario();
+		Funcionario anderson = new Gerente();
 		anderson.setNome("Anderson Neves");
 		anderson.setCpf("111333444-00");
 		anderson.setSalario(1000.00);
