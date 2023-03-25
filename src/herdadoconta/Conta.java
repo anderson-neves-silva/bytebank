@@ -10,11 +10,11 @@ public class Conta {
 	
 	public Conta (int agencia, int numero) {
 		Conta.total++;
-		System.out.println("o total de contas é " + Conta.total);
+		//System.out.println("o total de contas é " + Conta.total);
 		this.agencia = agencia;
 		this.numero = numero;
-		this.saldo = 100;
-		System.out.println("estou criando uma conta " + this.numero);
+		//this.saldo = 100;
+		//System.out.println("estou criando uma conta " + this.numero);
 	}
 	
 	public void deposita(double valor) {  
@@ -32,6 +32,8 @@ public class Conta {
 	/*
 	 * -esse if verifica se possui valor disponível para transferir, saca(valor); essa linha reutiliza o método saca 
 	 * para retira o valor da conta origem.
+	 * -aqui usamos o polimorfismo, pois passamos para quem recebe o tipo mais genérico como parâmetro o tipo Conta, aqui
+	 * essa referência do tipo Conta pode apontar para a ContaCorrente ou ContaPopanca, ou qualquer tipo de conta.
 	 */
 	public boolean transfere(double valor, Conta destino) {  
 		if (this.saldo >= valor) {
