@@ -22,7 +22,7 @@ public class TesteReferencias {
 		controle.registra(ev);
 		controle.registra(d);
 		
-		System.out.println(controle.getSomaBonificacao());
+		System.out.println(controle.getSoma());
 	}
 
 }

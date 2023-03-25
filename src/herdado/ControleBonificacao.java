@@ -16,7 +16,8 @@ public class ControleBonificacao {
 		this.somaBonificacao = this.somaBonificacao + bonificacao;
 	}
 	
-	public double getSomaBonificacao() {
+	public double getSoma() {
 		return somaBonificacao;
 	}
 }
+ 
