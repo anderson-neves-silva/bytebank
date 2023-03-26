@@ -20,6 +20,15 @@ public class ContaCorrente extends Conta {
 	public boolean saca(double valor) {
 		double valorASacar = valor + 0.2;
 		return super.saca(valorASacar);
+	}	
+	/*
+	 * -eu utilizei o recurso da ide, posicionei o cursor do mouse em sima onde mostravao o erro, e gerei ele automático.
+	 * -eu precisei liberar acesso aos filhos do atributo saldo mudando de private para protected.
+	 * implementei o corpo aqui no filho.
+	 */
+	@Override
+	public void deposita(double valor) {
+		super.saldo = super.saldo + valor;		
 	}
 	 
 }

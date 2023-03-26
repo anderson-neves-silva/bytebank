@@ -1,13 +1,13 @@
 package herdadoconta;
-
-public class Conta {
-	
-	private double saldo; 
+// ninguém mais pode instanciar objetos dessa classe.
+public abstract class Conta {
+	// classe abstrata pode conter atributos, sim, são os atributos que os filhos vão herdar.
+	protected double saldo; 
 	private int agencia;
 	private int numero;
 	private Cliente titular;
 	private static int total;
-	
+	// classe abstrata pode conter um construtor, sim, esse construtor pode ser chamado por um filho através do super().
 	public Conta (int agencia, int numero) {
 		Conta.total++;
 		//System.out.println("o total de contas é " + Conta.total);
@@ -16,10 +16,13 @@ public class Conta {
 		//this.saldo = 100;
 		//System.out.println("estou criando uma conta " + this.numero);
 	}
+	/*
+	 * -classe abstrata pode conter métodos concretos, sim, os filhos vão ganhar essas funcionalidades.
+	 * -mas eu vou alterar esse método para ser abstrato, isso obriga todos os filhos a implementar ele, vou fazer isso
+	 * lá neles.
+	 */
+	public abstract void deposita(double valor);  
 	
-	public void deposita(double valor) {  
-		this.saldo += valor;  
-	}	
 	// esse if verifica se possui dinheiro suficiente para o saque.
 	public boolean saca(double valor) {  
 		if (this.saldo >= valor) {
