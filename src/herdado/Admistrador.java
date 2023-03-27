@@ -1,6 +1,6 @@
 package herdado;
 // a classe Admistrador herda tudo da classe FuncionarioAutenticavel.
-public class Admistrador extends FuncionarioAutenticavel {
+public class Admistrador extends Funcionario {
 
 	@Override
 	public double getBonificacao() {

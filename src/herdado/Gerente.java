@@ -1,6 +1,6 @@
 package herdado;
-// a classe Gerente herda tudo da classe FuncionarioAutenticavel.
-public class Gerente extends FuncionarioAutenticavel {
+// a classe Gerente herda tudo da classe Autenticavel.
+public class Gerente extends Funcionario {
 	/*
 	 * -aqui eu mudo de this para super pois o atributo salário não está defenido aqui na classe Gerente, ele está
 	 * defenido na super classe sendo a classe Funcionário, pois sabemos que o this guarda a referência do atributo 

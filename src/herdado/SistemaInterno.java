@@ -5,7 +5,7 @@ public class SistemaInterno {
 	private int senha = 2222;	
 	
 	// esse sistema só pode entrar que tem a senha correta, nesse caso apenas pessoas autorizadas.
-	public void autentica(FuncionarioAutenticavel fa) {
+	public void autentica(Autenticavel fa) {
 		
 		// passando a senha para o método autentica do gerente.
 		boolean autenticou = fa.autentica(this.senha);
