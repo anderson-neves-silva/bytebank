@@ -6,7 +6,7 @@ package herdado;
  * quando usamos o new criamos um objeto que é algo concreto.
  * -nesse tipo de classe não podemos instanciar dessa classe. 
  */
-public abstract class Funcionario {
+public abstract class Funcionario {	
 	/*
 	 * -protected double salario; essa linha fala de protected que está entre private e public, public para as classes 
 	 * filhos, para o resto é private, esse modificador foi criado para liberar acesso aos filhos e privado para as 

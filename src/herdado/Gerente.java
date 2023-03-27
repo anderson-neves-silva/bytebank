@@ -1,26 +1,6 @@
 package herdado;
-// a classe Gerente herda tudo da classe Funcionario.
-public class Gerente extends Funcionario {
-
-	private int senha;	
-	// método que adiciona uma senha.
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}	
-	/*
-	 * -método que verifica se a senha está correta.
-	 * -na orientação a objetos existe um outro conceito que se chama sobrecarga, isso é dois métodos com o mesmo nome 
-	 * na mesma classe mas um apenas passando um parâmetro e outro passando com dois parâmetros, e também pode variar 
-	 * os tipos dos parâmetros em ambos os métodos, segue a assinatura como seria um exemplo de sobrecarga,
-	 * public boolean autentica(String login int senha) {}, note que tem que passamos dois parâmetros aqui.
-	 */
-	public boolean autentica(int senha) {
-		if(this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
-	}	
+// a classe Gerente herda tudo da classe FuncionarioAutenticavel.
+public class Gerente extends FuncionarioAutenticavel {
 	/*
 	 * -aqui eu mudo de this para super pois o atributo salário não está defenido aqui na classe Gerente, ele está
 	 * defenido na super classe sendo a classe Funcionário, pois sabemos que o this guarda a referência do atributo 
