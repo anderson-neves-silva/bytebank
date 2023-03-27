@@ -1,6 +1,9 @@
 package herdado;
-// a classe Gerente herda tudo da classe Autenticavel.
-public class Gerente extends Funcionario {
+// a classe Gerente herda tudo da classe Funcionario, assina o contrato Autenticavel.
+public class Gerente extends Funcionario implements Autenticavel {
+	
+	private int senha;
+	
 	/*
 	 * -aqui eu mudo de this para super pois o atributo salário não está defenido aqui na classe Gerente, ele está
 	 * defenido na super classe sendo a classe Funcionário, pois sabemos que o this guarda a referência do atributo 
@@ -15,6 +18,20 @@ public class Gerente extends Funcionario {
 	public double getBonificacao() {
 		System.out.println("Chamando o método de bonificação do Gerente");
 		return super.getSalario();
+	}
+
+	@Override
+	public void setSenha(int senha) {
+		this.senha = senha;		
+	}
+
+	@Override
+	public boolean autentica(int senha) {
+		if(this.senha == senha) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 	
 }

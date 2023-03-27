@@ -4,8 +4,7 @@ public class TesteFuncionario {
 
 	public static void main(String[] args) {
 		
-		Cliente cliente = new Cliente();
-		
+		Cliente cliente = new Cliente();		
 		
 		Gerente anderson = new Gerente();
 		anderson.setNome("Anderson Neves");

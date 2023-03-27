@@ -1,8 +1,13 @@
 package herdado;
+// a classe Admistrador herda tudo da classe FuncionarioAutenticavel assina o contrato Autenticavel.
+public class Administrador extends Funcionario implements Autenticavel {
 
-public class Cliente implements Autenticavel {
-	
 	private int senha;
+	
+	@Override
+	public double getBonificacao() {
+		return 50;
+	}
 
 	@Override
 	public void setSenha(int senha) {
@@ -15,7 +20,7 @@ public class Cliente implements Autenticavel {
 			return true;
 		} else {
 			return false;
-		}		
+		}
 	}
 
 }
